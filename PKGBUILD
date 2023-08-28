@@ -2,25 +2,21 @@
 # Contributor: libertylocked <libertylocked@disroot.org>
 
 pkgname=bitwarden
-pkgver=2023.7.1
+pkgver=2023.7.2
 pkgrel=1
 _electronversion=24
 pkgdesc='A secure and free password manager for all of your devices'
 arch=('x86_64')
-url='https://github.com/bitwarden/clients/tree/master/apps/desktop'
+url='https://github.com/quexten/clients/tree/feature/unix-biometrics'
 license=('GPL3')
 depends=("electron$_electronversion" 'libnotify' 'libsecret' 'libxtst' 'libxss' 'libnss_nis')
 makedepends=('git' 'npm' 'python' 'node-gyp' 'nodejs-lts-hydrogen' 'jq' 'rust')
-source=(bitwarden::git+https://github.com/bitwarden/clients.git#tag=desktop-v$pkgver
+source=(bitwarden::git+https://github.com/quexten/clients.git#branch=feature/unix-biometrics
         messaging.main.ts.patch
         nativelib.patch
         ${pkgname}.sh
         ${pkgname}.desktop)
-sha512sums=('SKIP'
-            'babcae0dba4d036e5d2cd04d8932b63253bc7b27b14d090932066e9d39383f7565c06d72dae9f96e741b494ef7e50a1fe7ec33905aa3124b427a8bf404df5762'
-            '88610cba9dea99aefdfea51139f5770f04f1e877d75e86f2eea3470c99880282c5ff91060cb08d92cdf00d0a1b3bd40c5f3ee887cee11946dd31ca06da978272'
-            '98d2860bef2283fd09710fbbc5362d7ef2cd8eca26f35805ea258f2dacba78bd6aab14c834388a5089a8150eb0f32a82577aab10f8ad68e1a6371959b2802ad4'
-            'fdc047aadc1cb947209d7ae999d8a7f5f10ae46bf71687080bc13bc3082cc5166bbbe88c8f506b78adb5d772f5366ec671b04a2f761e7d7f249ebe5726681e30')
+sha512sums=('SKIP')
 
 prepare() {
 	cd bitwarden/apps/desktop
