@@ -9,7 +9,7 @@ Next clone the repo and install via makepkg
 ```
 git clone https://github.com/Lutitious/arch-bw-bio
 cd arch-bw-bio
-makepkg -si -skipinteg
+makepkg -si --skipinteg
 ```
 ## Browser Integration
 If you care about browser integration log in and follow these steps
