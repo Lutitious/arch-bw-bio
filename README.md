@@ -1,3 +1,6 @@
+# Important
+<b>This will only work with gnome-keyring. From my testing I could not get kwallet working but gnome-keyring even installed on plasma works fine</b>
+
 ## Install
 
 First remove any existing bitwarden instances using pacman
